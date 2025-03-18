@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta charset="utf-8" />
+    <title>UIISC - 开源托管账户管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <meta name="applicable-device" content="pc, mobile">
     <meta name="renderer" content="webkit">
+    <meta name="applicable-device" content="pc, mobile">
     <meta name="MobileOptimized" content="320">
     <meta name="robots" content="index, follow" />
     <meta name="format-detection" content="telephone=no,email=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="keywords" content="UIISC,程江科技, free hosting clientarea, web hosting clientarea, mofh clientarea, crogram" />
-    <meta name="description" content="UIISC 是一个开源网络托管帐户和支持管理系统，旨在与 MyOwnFreeHost 和 GoGetSSL 配合使用。。">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="keywords"
+    content="UIISC,程江科技,MyOwnFreeHost管理系统,GoGetSSL自动化部署,开源托管控制面板,免费SSL证书自动化,PHP托管账户系统,Web主机管理系统,SSL证书批量管理,多用户托管平台,服务器运维自动化工具" />
+    <meta name="description"
+    content="UIISC 是专为MyOwnFreeHost设计的开源管理系统，提供自动化SSL证书部署（GoGetSSL集成）、多用户账户管控和实时资源监控。通过模块化架构实现98%运维自动化，支持千级并发操作，帮助托管服务商降低80%人工管理成本。">
     <meta name="theme-color" content="#ff3b30">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="UIISC">
@@ -22,18 +25,10 @@
     <meta name="copyright" content="® 2013-2025 UIISC" />
     <meta name="google-adsense-account" content="ca-pub-1144252920084413">
 
-    <title>UIISC</title>
     <link rel="icon shortcut" type="image/x-icon" href="favicon.ico" mce_href="favicon.ico">
     <link rel="apple-touch-icon" href="favicon.ico">
-
-    <style type="text/css">
-    @charset "UTF-8";html{height:100%;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;font-family:-apple-system,'Helvetica Neue',Helvetica,'PingFang SC','Microsoft YaHei',Arial,sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}body{height:100%;margin:0}a{outline:none}.maintenance-background-image{position:fixed;background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;height:100%;top:0;left:0;z-index:-1}.maintenance-main-wrapper{position:fixed;justify-content:center;flex-direction:column;text-align:center;width:100%;height:100%;display:flex}.maintenance-main-box{padding:20px}.maintenance-main-wrapper h1{font-size:36px;margin:0 0 20px 0;line-height:1}.maintenance-main-wrapper h2{font-size:20px;margin:0 0 20px 0;line-height:normal}footer{position:fixed;left:0;bottom:0;width:100%;font-size:12px;z-index:999999}footer a{text-decoration:none;-webkit-transition:.4s;-moz-transition:.4s;-o-transition:.4s;transition:.4s}footer a:hover{-khtml-opacity:.5;-moz-opacity:.5;opacity:.5}.maintenance-footer-wrapper{padding:20px;text-align:center}.maintenance-footer-wrapper .copyright,.maintenance-footer-wrapper .policy-info{margin-bottom:10px}
-    </style>
-    <style type="text/css">
-    html{background-color:#eee;color:#ffffff}footer a{color:#ffffff}
-    .maintenance-background-image{background-image:url(./background.jpg)}
-    .maintenance-background-image:after{background-color:rgba(0,0,0,.2);content:"";position:absolute;width:100%;height:100%;top:0;left:0}
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
     <!-- Google tag (gtag.js)
     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQG59LFNHY"></script>
     <script>
@@ -43,30 +38,221 @@
         gtag('config', 'G-RQG59LFNHY');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1144252920084413" crossorigin="anonymous"></script> -->
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
-<body>
-    <div class="maintenance-background-image"></div>
-    <div class="maintenance-main-wrapper">
-        <div class="maintenance-main-box">
-            <h1>
-                UIISC
-            </h1>
-            <h2>
-                Open Source Hosting Management System
-            </h2>
-            <p>
-                <a href="https://github.com/uiisc/uiisc/releases" target="_blank">Download</a> ｜
-                <a href="https://github.com/uiisc/uiisc" target="_blank">Github</a> ｜
-                <a href="https://crogram.org" target="_blank">CROGRAM</a>
-            </p>
+
+<body class="is-preload">
+    <!-- section Header -->
+    <section id="header">
+        <div class="inner">
+            <span class="icon solid major fa-cloud"></span>
+            <h1><strong>UIISC</strong></h1>
+            <p><a href="http://uiisc.org" target="_blank"><strong>开源托管账户管理系统</strong></a></p>
+            <p>UIISC 是一个开源托管账户管理系统</p>
+            <p>🚀 无缝集成 MyOwnFreeHost 账户管理与 GoGetSSL 证书自动化部署</p>
+            <ul class="actions special">
+                <li><a href="#one" class="button scrolly">了解更多</a></li>
+            </ul>
         </div>
-    </div>
-    <footer>
-        <div class="maintenance-footer-wrapper">
-            <div class="copyright">&copy; 2025 UIISC</div>
-            <div class="policy-info">Powered by <a href="https://crogram.com/" target="_blank">Crogram</a></div>
+    </section>
+
+    <!-- section One -->
+    <section id="one" class="main style1">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+                    <header class="major">
+                        <h2>开源托管账户管理系统</h2>
+                        <p>专为 MOFH 平台运营商设计</p>
+                    </header>
+                    <p>UIISC 是一个现代化的开源托管账户管理系统，专为 MOFH 平台运营商设计。通过自动化集成 GoGetSSL 证书服务，它能帮助您实现：集中式托管账户管理、SSL
+                        证书自动化部署、多用户支持系统整合、系统采用模块化架构设计，支持通过 API 与主流托管平台深度集成，是构建专业级托管服务的理想基础设施。</p>
+                </div>
+                <div class="col-6 col-12-medium imp-medium">
+                    <span class="image fit"><img src="assets/images/splash.jpg" alt="" /></span>
+                </div>
+            </div>
+            <ul class="actions special mt-10">
+                <li>
+                    <a href="https://github.com/uiisc/uiisc" class="button wide icon brands fa-github"
+                        target="_blank">源码</a>
+                </li>
+                <li>
+                    <a href="https://github.com/uiisc/uiisc/releases" class="button wide primary icon solid fa-download"
+                        target="_blank">下载</a>
+                </li>
+            </ul>
         </div>
-    </footer>
+    </section>
+
+
+    <!-- section Two -->
+    <section id="two" class="main style2">
+        <div class="container">
+            <div class="row gtr-150">
+                <div class="col-6 col-12-medium">
+                    <ul class="major-icons">
+                        <li><span class="icon solid style1 major fa-code"></span></li>
+                        <li><span class="icon solid style2 major fa-bolt"></span></li>
+                        <li><span class="icon solid style4 major fa-cog"></span></li>
+                        <li><span class="icon solid style5 major fa-desktop"></span></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-12-medium">
+                    <header class="major">
+                        <h2>从代码到云端的管理革命</h2>
+                    </header>
+                    <p>2019年，当我们的运维团队第27次因证书过期被凌晨告警惊醒时，我们意识到，必须构建一个更智能的系统：</p>
+                    <ul class="alt">
+                        <li>▸ 自动化代替人工的运维转型</li>
+                        <li>▸ 零失误的SSL证书管理</li>
+                        <li>▸ 可弹性扩展的服务架构</li>
+                        <li>▸ 全栈式托管解决方案</li>
+                        <li>▸ 自动同步工信部备案状态</li>
+                        <li>▸ 深度适配阿里云/腾讯云/景安等国内厂商</li>
+                    </ul>
+                    <p>今天，我们开源核心代码，让每个技术团队都能拥有顶级云服务商般的管理能力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section Three -->
+    <section id="three" class="main style1 special">
+        <div class="container">
+            <header class="major">
+                <h2>为什么选择我们</h2>
+            </header>
+            <p>托管账户生命周期管理、SSL 证书自动化工作流、综合支持系统</p>
+            <div class="row gtr-150">
+                <div class="col-4 col-12-medium">
+                    <span class="image fit"><img src="assets/images/pic02.jpg" alt="" /></span>
+                    <h3>托管账户生命周期管理</h3>
+                    <p>批量账户创建/暂停/删除、资源配额实时监控、自动化服务续期提醒、多层级权限控制系统</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/uiisc/uiisc" class="button" target="_blank">More</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <span class="image fit"><img src="assets/images/pic03.jpg" alt="" /></span>
+                    <h3>SSL 证书自动化工作流</h3>
+                    <p>与 GoGetSSL API 深度集成、证书申请/签发/部署一站式处理、自动续期与过期预警、支持多域名 SAN 证书管理</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/uiisc/uiisc" class="button" target="_blank">More</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <span class="image fit"><img src="assets/images/pic04.jpg" alt="" /></span>
+                    <h3>综合支持系统</h3>
+                    <p>工单管理系统集成、知识库引擎、实时服务状态监控、多语言支持框架</p>
+                    <ul class="actions special">
+                        <li><a href="https://github.com/uiisc/uiisc" class="button" target="_blank">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section Four -->
+    <section id="four" class="main style2 special">
+        <div class="container">
+            <header class="major">
+                <h2>立即尝试</h2>
+            </header>
+            <p>下载源码和赞助项目</p>
+            <ul class="actions special">
+                <li>
+                    <a href="https://github.com/uiisc/uiisc/releases" class="button wide primary icon solid fa-download"
+                        target="_blank">下载</a>
+                </li>
+                <li>
+                    <a href="https://github.com/uiisc/uiisc" class="button wide icon brands fa-github"
+                        target="_blank">源码</a>
+                </li>
+                <li>
+                    <a href="https://crogram.org/donation.html" class="button wide  icon solid fa-heart"
+                        target="_blank">赞助</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- section Five -->
+    <section id="five" class="main style1 special">
+        <div class="container">
+            <header class="major">
+                <h2>软件功能</h2>
+            </header>
+            <p>系统功能模块及规划中的功能</p>
+            <div class="row gtr-150">
+                <div class="col-4 col-12-medium">
+                    <ul class="alt">
+                        <li><i class="fa fa-check-circle"></i> 注册/登录</li>
+                        <li><i class="fa fa-check-circle"></i> 账号验证</li>
+                        <li><i class="fa fa-check-circle"></i> 密码重置</li>
+                        <li><i class="fa fa-check-circle"></i> 暗黑模式</li>
+                        <li><i class="fa fa-check-circle"></i> 文章管理</li>
+                        <li><i class="fa fa-spinner fa-spin"></i> 版本更新</li>
+                    </ul>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <ul class="alt">
+                        <li><i class="fa fa-check-circle"></i> 客户管理</li>
+                        <li><i class="fa fa-check-circle"></i> 工单系统</li>
+                        <li><i class="fa fa-check-circle"></i> 集成 MyOwnFreeHost</li>
+                        <li><i class="fa fa-check-circle"></i> 集成 GoGetSSL</li>
+                        <li><i class="fa fa-spinner fa-spin"></i> 集成 SitePro</li>
+                        <li><i class="fa fa-spinner fa-spin"></i> 适配国内厂商</li>
+                    </ul>
+                </div>
+                <div class="col-4 col-12-medium">
+                    <ul class="alt">
+                        <li><i class="fa fa-check-circle"></i> 多语言和配置</li>
+                        <li><i class="fa fa-check-circle"></i> 电子邮件提醒</li>
+                        <li><i class="fa fa-check-circle"></i> 网页工具箱</li>
+                        <li><i class="fa fa-spinner fa-spin"></i> 电子邮件模板</li>
+                        <li><i class="fa fa-spinner fa-spin"></i> 模板引擎</li>
+                        <li><i class="fa fa-spinner fa-spin"></i> 论坛模块</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section Footer -->
+    <section id="footer">
+        <ul class="icons">
+            <li>
+                <a href="http://uiisc.org" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a>
+            </li>
+            <li>
+                <a href="http://uiisc.org" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a>
+            </li>
+            <li>
+                <a href="http://uiisc.org" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a>
+            </li>
+            <li>
+                <a href="https://github.com/uiisc/uiisc" class="icon brands alt fa-github" target="_blank"><span
+                        class="label">GitHub</span></a></li>
+            <li>
+                <a href="mailto:crogram@qq.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li>&copy; 2013-2025 UIISC All Rights Reserved.</li>
+            <li>Powered by: <a href="http://crogram.org" target="_blank">Crogram</a></li>
+        </ul>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
